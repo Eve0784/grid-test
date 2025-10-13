@@ -51,6 +51,46 @@ body{
     /* align-items: center; */
     gap: 8px;/*oppure colum-gap o row-gap*/
 }
+@media(max-width:480px){
+    .container{
+    display: grid;
+    grid-template-rows: 30vh 25vh 80vh 25vh 25vh 30vh;
+    height: 100vh;
+    grid-template-columns: 100vw;
+    grid-template-areas:
+    "header"
+    "menu"
+    "main"
+    "widget1"
+    "widget2"
+    "footer";
+    column-gap: 0px;
+    height: auto;
+    }
+    body{
+        height: auto;
+    }
+}
+
+@media(min-width:480px) and (max-width:768px){
+    .container{
+    display: grid;
+    grid-template-rows: 30vh 25vh 80vh 25vh 30vh;
+    grid-template-columns: 50vw 50vw;
+    grid-template-areas:
+    "header header"
+    "menu menu"
+    "main main"
+    "widget1 widget2"
+    "footer footer";
+    column-gap: 0px;
+    height: auto;
+    }
+    body{
+        height: auto;
+    }
+}
+
 .area-header{
     grid-area: header;
 }
